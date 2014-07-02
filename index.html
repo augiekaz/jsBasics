@@ -3,6 +3,31 @@
 	<head>
 
 		<script src="js/jquery.js"></script>
+		<script>
+
+		$(window).load(init);
+
+		function init(){
+			b = new trigBlocks();
+			b.colorThem();
+		}
+			var trigBlocks= function(){
+				colors = ['yellow', 'orange', 'blue'];
+
+				this.colorThem= function(){
+
+					$('.thingy').each(function(index){
+
+						$(this).css({'background-color':colors[index]})
+					})
+
+
+				}
+			}
+
+		
+
+		</script>
 
 		<style>
 		.thingy {
